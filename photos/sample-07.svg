@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 400 600" role="img" aria-label="Long Shadows (placeholder)">
+  <defs>
+    <linearGradient id="g6" x1="0" y1="0" x2="0" y2="1" gradientTransform="rotate(54,0.5,0.5)">
+      <stop offset="0%" stop-color="#e9c46a"/>
+      <stop offset="55%" stop-color="#e76f51"/>
+      <stop offset="100%" stop-color="#264653"/>
+    </linearGradient>
+    <radialGradient id="sun6" cx="30%" cy="28%" r="40%">
+      <stop offset="0%" stop-color="#fff8e7" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#e9c46a" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#e9c46a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="600" fill="url(#g6)"/>
+  <circle cx="120" cy="168" r="200" fill="url(#sun6)"/>
+  <text x="372" y="570" font-family="Georgia, 'Times New Roman', serif" font-size="28" fill="#ffffff" fill-opacity="0.82" text-anchor="end" letter-spacing="1">Long Shadows</text>
+  <text x="372" y="570" dy="34" font-family="system-ui, sans-serif" font-size="14" fill="#ffffff" fill-opacity="0.5" text-anchor="end" letter-spacing="3">PLACEHOLDER</text>
+</svg>

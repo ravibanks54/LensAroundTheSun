@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" role="img" aria-label="Driftwood (placeholder)">
+  <defs>
+    <linearGradient id="g9" x1="0" y1="0" x2="0" y2="1" gradientTransform="rotate(57,0.5,0.5)">
+      <stop offset="0%" stop-color="#90e0ef"/>
+      <stop offset="55%" stop-color="#0077b6"/>
+      <stop offset="100%" stop-color="#03045e"/>
+    </linearGradient>
+    <radialGradient id="sun9" cx="30%" cy="28%" r="40%">
+      <stop offset="0%" stop-color="#fff8e7" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#90e0ef" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#90e0ef" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#g9)"/>
+  <circle cx="180" cy="224" r="300" fill="url(#sun9)"/>
+  <text x="572" y="770" font-family="Georgia, 'Times New Roman', serif" font-size="42" fill="#ffffff" fill-opacity="0.82" text-anchor="end" letter-spacing="1">Driftwood</text>
+  <text x="572" y="770" dy="51" font-family="system-ui, sans-serif" font-size="21" fill="#ffffff" fill-opacity="0.5" text-anchor="end" letter-spacing="3">PLACEHOLDER</text>
+</svg>

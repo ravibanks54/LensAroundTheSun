@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" role="img" aria-label="Backlit (placeholder)">
+  <defs>
+    <linearGradient id="g5" x1="0" y1="0" x2="0" y2="1" gradientTransform="rotate(24,0.5,0.5)">
+      <stop offset="0%" stop-color="#a0c4ff"/>
+      <stop offset="55%" stop-color="#bdb2ff"/>
+      <stop offset="100%" stop-color="#242038"/>
+    </linearGradient>
+    <radialGradient id="sun5" cx="30%" cy="28%" r="40%">
+      <stop offset="0%" stop-color="#fff8e7" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#a0c4ff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#a0c4ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="200" height="200" fill="url(#g5)"/>
+  <circle cx="60" cy="56" r="100" fill="url(#sun5)"/>
+  <text x="172" y="170" font-family="Georgia, 'Times New Roman', serif" font-size="14" fill="#ffffff" fill-opacity="0.82" text-anchor="end" letter-spacing="1">Backlit</text>
+  <text x="172" y="170" dy="17" font-family="system-ui, sans-serif" font-size="7" fill="#ffffff" fill-opacity="0.5" text-anchor="end" letter-spacing="3">PLACEHOLDER</text>
+</svg>

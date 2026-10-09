@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="800" viewBox="0 0 1000 800" role="img" aria-label="Low Tide (placeholder)">
+  <defs>
+    <linearGradient id="g4" x1="0" y1="0" x2="0" y2="1" gradientTransform="rotate(23,0.5,0.5)">
+      <stop offset="0%" stop-color="#fcbf49"/>
+      <stop offset="55%" stop-color="#f77f00"/>
+      <stop offset="100%" stop-color="#1d1b1b"/>
+    </linearGradient>
+    <radialGradient id="sun4" cx="30%" cy="28%" r="40%">
+      <stop offset="0%" stop-color="#fff8e7" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#fcbf49" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#fcbf49" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1000" height="800" fill="url(#g4)"/>
+  <circle cx="300" cy="224" r="400" fill="url(#sun4)"/>
+  <text x="972" y="770" font-family="Georgia, 'Times New Roman', serif" font-size="56" fill="#ffffff" fill-opacity="0.82" text-anchor="end" letter-spacing="1">Low Tide</text>
+  <text x="972" y="770" dy="68" font-family="system-ui, sans-serif" font-size="28" fill="#ffffff" fill-opacity="0.5" text-anchor="end" letter-spacing="3">PLACEHOLDER</text>
+</svg>

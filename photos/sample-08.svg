@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3200" height="1800" viewBox="0 0 3200 1800" role="img" aria-label="Midday Haze (placeholder)">
+  <defs>
+    <linearGradient id="g7" x1="0" y1="0" x2="0" y2="1" gradientTransform="rotate(26,0.5,0.5)">
+      <stop offset="0%" stop-color="#ffe8d6"/>
+      <stop offset="55%" stop-color="#ddbea9"/>
+      <stop offset="100%" stop-color="#6b705c"/>
+    </linearGradient>
+    <radialGradient id="sun7" cx="30%" cy="28%" r="40%">
+      <stop offset="0%" stop-color="#fff8e7" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#ffe8d6" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffe8d6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="3200" height="1800" fill="url(#g7)"/>
+  <circle cx="960" cy="504" r="900" fill="url(#sun7)"/>
+  <text x="3172" y="1770" font-family="Georgia, 'Times New Roman', serif" font-size="126" fill="#ffffff" fill-opacity="0.82" text-anchor="end" letter-spacing="1">Midday Haze</text>
+  <text x="3172" y="1770" dy="153" font-family="system-ui, sans-serif" font-size="63" fill="#ffffff" fill-opacity="0.5" text-anchor="end" letter-spacing="3">PLACEHOLDER</text>
+</svg>

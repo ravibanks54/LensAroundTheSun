@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lens Around the Sun — Photography</title>
+  <meta name="description" content="Photography portfolio of Lens Around the Sun — light, landscape, and the moments between." />
+
+  <!-- Social share preview (shows this image when the link is pasted into messages / socials) -->
+  <meta property="og:title" content="Lens Around the Sun — Photography" />
+  <meta property="og:description" content="A photography portfolio — light, landscape, and the moments between." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="photos/sample-01.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">☀</span>
+      <span class="brand-name">Lens Around the Sun</span>
+    </a>
+    <nav class="nav">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-ig" href="https://www.instagram.com/lensaroundthesun" target="_blank" rel="noopener">Instagram ↗</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-kicker">Photography</p>
+      <h1 class="hero-title">Light, landscape,<br />and the moments between.</h1>
+      <p class="hero-sub">A collection of frames chasing the sun. Scroll to explore the work.</p>
+      <a class="hero-cta" href="#work">View the gallery ↓</a>
+    </div>
+  </section>
+
+  <main>
+    <section id="work" class="work">
+      <div class="section-head">
+        <h2>Selected Work</h2>
+        <div class="filters" id="filters" role="group" aria-label="Filter photos by category"></div>
+      </div>
+      <div class="gallery" id="gallery" aria-live="polite"></div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="about-inner">
+        <h2>About</h2>
+        <!-- EDIT ME: replace with your friend's real bio and name -->
+        <p>
+          Hi — I'm the photographer behind <em>Lens Around the Sun</em>. I shoot
+          light the way it falls: golden hours, long shadows, and the quiet frames
+          most people walk past. This is a selection of work from the places the
+          light has taken me.
+        </p>
+        <p>
+          For prints, commissions, or just to say hello, get in touch below.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="contact-inner">
+        <h2>Get in touch</h2>
+        <p>Bookings, prints, or collaborations — I'd love to hear from you.</p>
+        <!-- EDIT ME: put the real email address here -->
+        <a class="contact-email" href="mailto:hello@example.com">hello@example.com</a>
+        <div class="contact-social">
+          <a href="https://www.instagram.com/lensaroundthesun" target="_blank" rel="noopener">@lensaroundthesun ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Lens Around the Sun. All photographs are the property of the artist.</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lb-btn lb-close" id="lbClose" aria-label="Close (Esc)">✕</button>
+    <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous photo (←)">‹</button>
+    <figure class="lb-figure">
+      <img class="lb-img" id="lbImg" src="" alt="" />
+      <figcaption class="lb-caption" id="lbCaption"></figcaption>
+    </figure>
+    <button class="lb-btn lb-next" id="lbNext" aria-label="Next photo (→)">›</button>
+  </div>
+
+  <script src="js/photos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
