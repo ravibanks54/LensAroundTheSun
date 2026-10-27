@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aura Cam — Lens Around the Sun</title>
+  <meta name="description" content="Point the camera at yourself and watch your aura bloom — a live, in-browser aura photo booth. Nothing leaves your device." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/aura.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">☀</span>
+      <span class="brand-name">Lens Around the Sun</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="aura.html" aria-current="page">Aura Cam</a>
+      <a class="nav-ig" href="https://www.instagram.com/lensaroundthesun" target="_blank" rel="noopener">Instagram ↗</a>
+    </nav>
+  </header>
+
+  <main class="aura-main">
+    <div class="aura-head">
+      <p class="hero-kicker">Aura Cam</p>
+      <h1>See the light around you.</h1>
+      <p>Point the camera at yourself and watch your aura bloom — a living halo that flares with your every move. Pick a mood, dial the glow, and capture a frame.</p>
+    </div>
+
+    <div class="stage" id="stage">
+      <video id="cam" playsinline autoplay muted></video>
+      <canvas id="view"></canvas>
+      <div class="flash" id="flash"></div>
+
+      <div class="start-wrap" id="startWrap">
+        <button class="btn" id="startBtn">Start the camera</button>
+        <p class="start-note">We'll ask your browser for camera access. Everything runs locally — no photo or video ever leaves your device.</p>
+        <p class="start-msg" id="startMsg" hidden></p>
+      </div>
+    </div>
+
+    <div class="reading" id="reading" hidden>
+      <div class="r-label">Your aura reads</div>
+      <div class="r-name" id="readName">—</div>
+      <div class="r-trait" id="readTrait">&nbsp;</div>
+    </div>
+
+    <div class="toolbar" id="toolbar" hidden>
+      <div class="moods" id="moods" role="group" aria-label="Aura mood">
+        <button class="chip" data-mood="auto" aria-pressed="true"><span class="dot auto"></span>Auto read</button>
+        <button class="chip" data-mood="solar" aria-pressed="false"><span class="dot solar"></span>Solar</button>
+        <button class="chip" data-mood="cosmic" aria-pressed="false"><span class="dot cosmic"></span>Cosmic</button>
+        <button class="chip" data-mood="electric" aria-pressed="false"><span class="dot electric"></span>Electric</button>
+        <button class="chip" data-mood="ethereal" aria-pressed="false"><span class="dot ethereal"></span>Ethereal</button>
+        <button class="chip" data-mood="toxic" aria-pressed="false"><span class="dot toxic"></span>Toxic</button>
+      </div>
+
+      <div class="sliders">
+        <div class="slider">
+          <label for="intensity">Aura glow</label>
+          <input type="range" id="intensity" min="0" max="100" value="72" />
+        </div>
+        <div class="slider">
+          <label for="distort">Distortion</label>
+          <input type="range" id="distort" min="0" max="100" value="45" />
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn-ghost" id="mirrorBtn" aria-pressed="true">Mirror</button>
+        <button class="btn-ghost" id="flipBtn">Flip camera</button>
+        <button class="btn-ghost btn-shot" id="shotBtn">◉ Capture photo</button>
+      </div>
+    </div>
+
+    <div class="strip" id="strip" hidden aria-label="Your captures"></div>
+
+    <p class="aura-note">Tip: press <strong>Space</strong> or <strong>C</strong> to capture. Captures download straight to your device as PNG. The live camera needs a secure page — open it over HTTPS or via <code>localhost</code>.</p>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Lens Around the Sun. Aura Cam runs entirely in your browser.</p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/aura.js"></script>
+</body>
+</html>

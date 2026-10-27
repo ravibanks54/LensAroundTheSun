@@ -1,0 +1,163 @@
+/* ============================================================
+   Lens Around the Sun — Aura Cam styles
+   Inherits tokens (--bg, --accent, --serif …) from style.css
+   ============================================================ */
+
+.aura-main {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: clamp(20px, 4vw, 40px) clamp(16px, 4vw, 48px) 64px;
+}
+
+.aura-head { text-align: center; margin-bottom: 22px; }
+.aura-head .hero-kicker {
+  font-family: var(--sans);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  color: var(--accent);
+  margin: 0 0 6px;
+}
+.aura-head h1 {
+  font-size: clamp(30px, 5vw, 50px);
+  line-height: 1.05;
+  margin: 0 0 8px;
+  text-wrap: balance;
+}
+.aura-head p { color: var(--fg-dim); margin: 0 auto; max-width: 60ch; }
+
+/* ---------- Stage ---------- */
+.stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 120% at 50% 0%, #1a1722 0%, var(--bg) 70%);
+  border: 1px solid var(--line);
+  box-shadow: 0 30px 80px -40px rgba(0,0,0,0.9);
+}
+#cam { display: none; }
+#view { display: block; width: 100%; height: 100%; }
+
+/* capture flash */
+.flash {
+  position: absolute; inset: 0; background: #fff; opacity: 0;
+  pointer-events: none;
+}
+.flash.go { animation: flash 420ms ease-out; }
+@keyframes flash { 0% { opacity: 0.85; } 100% { opacity: 0; } }
+
+/* ---------- Start overlay ---------- */
+.start-wrap {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 18px; text-align: center; padding: 24px;
+}
+.start-wrap::before {
+  content: "☀";
+  font-size: 52px; color: var(--accent);
+  filter: drop-shadow(0 0 24px rgba(246,180,90,0.5));
+  animation: pulse 4s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100% { transform: scale(1); opacity: 0.9; } 50% { transform: scale(1.08); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .start-wrap::before { animation: none; } }
+
+.btn {
+  font-family: var(--sans); font-size: 15px; font-weight: 500;
+  color: var(--bg); background: var(--accent);
+  border: none; border-radius: 999px; padding: 13px 28px; cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 30px -10px rgba(246,180,90,0.6);
+}
+.btn:hover { transform: translateY(-1px); background: #ffc876; }
+.btn:disabled { opacity: 0.6; cursor: default; transform: none; }
+.start-note { color: var(--fg-faint); font-size: 13px; max-width: 42ch; }
+.start-msg {
+  color: var(--accent-2); font-size: 14px; max-width: 48ch; line-height: 1.5;
+}
+.start-msg code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  background: rgba(255,255,255,0.08); padding: 1px 6px; border-radius: 5px;
+  font-size: 0.9em; color: var(--fg);
+}
+
+/* ---------- Reading ---------- */
+.reading {
+  text-align: center; margin: 20px 0 6px;
+}
+.reading .r-label {
+  text-transform: uppercase; letter-spacing: 2px; font-size: 11px;
+  color: var(--fg-faint);
+}
+.reading .r-name {
+  font-family: var(--serif); font-size: 30px; color: var(--fg);
+  margin: 2px 0;
+}
+.reading .r-trait { color: var(--fg-dim); font-size: 14px; }
+
+/* ---------- Toolbar ---------- */
+.toolbar {
+  margin-top: 18px;
+  display: flex; flex-direction: column; gap: 18px; align-items: center;
+}
+.moods { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.chip {
+  font-family: var(--sans); font-size: 13px; color: var(--fg-dim);
+  background: var(--bg-soft); border: 1px solid var(--line);
+  border-radius: 999px; padding: 8px 16px; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 7px;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.chip:hover { color: var(--fg); }
+.chip .dot { width: 11px; height: 11px; border-radius: 50%; }
+.chip[aria-pressed="true"] { color: var(--fg); border-color: var(--accent); background: rgba(246,180,90,0.08); }
+.dot.auto     { background: conic-gradient(from 0deg, #e4572e, #f6b45a, #60e8ff, #9642cd, #e4572e); }
+.dot.solar    { background: linear-gradient(135deg, #e86016, #ffd478); }
+.dot.cosmic   { background: linear-gradient(135deg, #9642cd, #60e8ff); }
+.dot.electric { background: linear-gradient(135deg, #2a8eff, #cdf6ff); }
+.dot.ethereal { background: linear-gradient(135deg, #e87ac8, #b6ffde); }
+.dot.toxic    { background: linear-gradient(135deg, #7adc1e, #e8ff7a); }
+
+.sliders { display: flex; flex-wrap: wrap; gap: 22px; justify-content: center; }
+.slider { display: flex; flex-direction: column; gap: 6px; min-width: 180px; }
+.slider label {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--fg-faint);
+}
+.slider input[type="range"] { accent-color: var(--accent); cursor: pointer; }
+
+.actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.btn-ghost {
+  font-family: var(--sans); font-size: 14px; color: var(--fg);
+  background: var(--bg-soft); border: 1px solid var(--line);
+  border-radius: 999px; padding: 11px 20px; cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.btn-ghost:hover { border-color: var(--fg-dim); }
+.btn-ghost[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
+.btn-shot { background: var(--accent); color: var(--bg); border: none; font-weight: 500; }
+.btn-shot:hover { background: #ffc876; }
+
+/* ---------- Captures strip ---------- */
+.strip {
+  margin: 24px auto 0; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+}
+.thumb {
+  width: 92px; height: 69px; border-radius: 8px; overflow: hidden;
+  border: 1px solid var(--line); display: block;
+}
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.thumb:hover { border-color: var(--accent); }
+
+.aura-note {
+  text-align: center; color: var(--fg-faint); font-size: 12.5px;
+  margin: 34px auto 0; max-width: 56ch; line-height: 1.6;
+}
+
+@media (max-width: 560px) {
+  .stage { aspect-ratio: 3 / 4; }
+  .reading .r-name { font-size: 25px; }
+}
